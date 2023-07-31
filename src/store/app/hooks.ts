@@ -16,6 +16,7 @@ import { AppRoute, CarbonioModule } from '../../../types';
 
 export const useApp = (appId: string) => (): CarbonioModule => useAppStore((s) => s.apps[appId]);
 export const useApps = (): Record<string, CarbonioModule> => useAppStore((s) => s.apps);
+export const getComponent = (): any => useAppStore((s) => s.views.appView);
 export const useAppList = (): Array<CarbonioModule> => {
 	const apps = useApps();
 	return useMemo(() => sortBy(apps, (a) => a.priority), [apps]);
