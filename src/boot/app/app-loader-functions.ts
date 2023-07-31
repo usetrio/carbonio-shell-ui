@@ -39,7 +39,7 @@ import {
 	getUserRight,
 	getUserRights
 } from '../../store/account';
-import { getApp, getAppContext, useApp, useAppContext } from '../../store/app';
+import { getApp, getAppContext, useApp, useAppContext, useAppStore } from '../../store/app';
 import {
 	addBoard,
 	closeBoard,
@@ -108,6 +108,7 @@ export const getAppFunctions = (pkg: CarbonioModule): Record<string, Function> =
 	getAppContext: getAppContext(pkg.name),
 	useApp: useApp(pkg.name),
 	getApp: getApp(pkg.name),
+	useAppStore: useAppStore(),
 
 	// INTEGRATIONS
 	useIntegratedFunction,
