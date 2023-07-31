@@ -82,7 +82,8 @@ declare const useActionFactory: <T>(
 	type: string,
 	id: string
 ) => [ActionFactory<T> | undefined, boolean];
-declare const useAppStore: any;
+declare const test: () => string;
+declare const useAppStore: () => any;
 declare const useApp: () => CarbonioModule;
 declare const getApp: () => CarbonioModule;
 declare const useAppContext: <T>() => T;
